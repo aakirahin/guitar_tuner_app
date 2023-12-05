@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Pitch from './Pitch';
+import { tunings } from './utils/tuning';
 
 function App() {
+  const [tuning, setTuning] = useState("eadgbe")
+
+  const changeTuning = (ev) => setTuning(ev.target.value)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="container">
+      <Pitch tuning={tuning} />
+      <select name="tunings" id="tunings" value={tuning} onChange={(ev) => changeTuning(ev)}>
+        {Object.keys(tunings).map((tuning) => {
+          return <option value={tuning}>{tunings[tuning].name} - {tuning.toUpperCase()}</option>
+        })}
+      </select>
     </div>
   );
 }
