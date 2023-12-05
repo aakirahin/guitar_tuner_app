@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/guitar_tuner_app/static/css/main.8f312bf7.css",
+    "main.js": "/guitar_tuner_app/static/js/main.769aecc8.js",
+    "index.html": "/guitar_tuner_app/index.html",
+    "main.8f312bf7.css.map": "/guitar_tuner_app/static/css/main.8f312bf7.css.map",
+    "main.769aecc8.js.map": "/guitar_tuner_app/static/js/main.769aecc8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8f312bf7.css",
+    "static/js/main.769aecc8.js"
+  ]
+}
